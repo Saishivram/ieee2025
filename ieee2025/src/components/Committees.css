@@ -1,0 +1,282 @@
+/* Committees.css */
+
+/* Prevent horizontal scrolling globally */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.committees {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.committees-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #171819;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: left;
+  position: relative;
+  padding-left: 0;  
+  padding-bottom: 15px;
+  border-bottom: 2px solid #171819; 
+  width: 100%;
+  margin-right: 0;
+}
+
+.page-title::before {
+  display:none
+}
+
+.committee-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.committee-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.committee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-tech-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+  background-size: 300% 300%;
+  animation: gradientBG 5s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card-header {
+  padding: 30px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.member-title {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .committees-container {
+    padding: 10px 15px;
+    overflow-x: hidden;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .committee-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+    justify-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .committee-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .card-header {
+    padding: 25px 20px 20px;
+  }
+  
+  .profile-image {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .card-content {
+    padding: 20px 15px;
+  }
+  
+  .member-name {
+    font-size: 1.1rem;
+  }
+  
+  .member-title {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+}
+
+@media (max-width: 480px) {
+  .committees-container {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    margin-top: 75px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 5px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .committee-grid {
+    gap: 15px;
+    padding: 0 5px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .committee-card {
+    width: calc(100% - 10px);
+    max-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .card-header {
+    padding: 20px 15px 15px;
+  }
+  
+  .member-name {
+    font-size: 1.1rem;
+  }
+  
+  .member-title {
+    font-size: 0.85rem;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+}
